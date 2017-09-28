@@ -1,1 +1,7 @@
-<h1>Home Page</h1>
+<section class="sidebar">
+    <h1 class="site-title">Bloc It Off</h1>
+    <button class="button-space" type="button" ng-click="home.open()">Add Task</button>
+        <div ng-repeat="task in home.tasks">
+            <a class="task-list" ng-click="home.setCurrentTask(task)">{{ task.$value }}</a>
+        </div>
+</section>
