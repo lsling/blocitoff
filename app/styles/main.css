@@ -2,65 +2,77 @@ button {
     -webkit-appearance: none;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    background-color: #777;
+    background-color: #0153B9;
     border: none;
     padding: 3px 15px;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 50px;
 }
 
 button:hover {
-    background-color: #006699;
+    background-color: #777;
     color: white;
 }
 
 .button-space {
-    margin: 28px 0 40px 25px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-size: 20px;
+    margin: -10px 0 0px -25px;
 }
 
 button[type=submit] {
     text-transform: uppercase;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
 
 button[type=button] {
     text-transform: uppercase;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 32px;
 }
 
 hr {
-    width: 100%;
+    width: 108%;
     margin: 0px;
+    border: 1px solid #fff;
+    margin-left: -25px;
 }
 
-.sidebar {
+.task-block {
     background-color: #F2F2F2;
-    margin: -20px 0 0 -10px;
-    width: 370px;
-    height: 100%;
-    position: absolute;
+    display: block;
+    margin: auto;
+    width: 400px;
     padding: 10px 0 0 25px;
 }
 
 .site-title {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
     font-size: 38px;
-    color: #006699;
-    float: left;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #0172FF;
+    height: 80px;
+    width: 400px;
+    display: block;
+    margin: auto;
+    /*float: left;*/
 }
 
 .task-list {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    line-height: 36px;
+    line-height: 48px;
     color: #777;
     float: none;
     cursor: pointer;
@@ -77,7 +89,7 @@ input:focus {
 }
 
 .modal-title {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #006699;
     font-size: 24px;
     padding: 20px 0 15px 0;
@@ -85,7 +97,7 @@ input:focus {
 }
 
 .modal-text {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 14px;
     padding: 0 0 30px 0;
@@ -114,14 +126,14 @@ div.messages-list.ng-scope > div:nth-of-type(odd) {
 **/
 
 .task-title {
-    font-family: 'Work Sans', serif;
+    font-family: 'Roboto', sans-serif;
     color: #006699;
     font-size: 24px;
     padding-top: 10px;
 }
 
 .username {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #777;
     font-size: 18px;
     line-height: 34px;
@@ -129,7 +141,7 @@ div.messages-list.ng-scope > div:nth-of-type(odd) {
 }
 
 .sent-at {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #777;
     font-size: 18px;
     float: right;
