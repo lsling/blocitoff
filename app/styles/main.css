@@ -171,3 +171,19 @@ section.send-message {
     height: 70px;
     color: white;
 }
+
+.ion-checkmark {
+  color: #777;
+  font-size: 30px;
+  float: right;
+  padding-right: 10px;
+
+}
+
+.ion-close {
+  color: #777;
+  font-size: 30px;
+  padding-right: 10px;
+  float: right;
+
+}

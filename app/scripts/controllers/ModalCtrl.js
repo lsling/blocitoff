@@ -1,5 +1,5 @@
 (function() {
-    function ModalCtrl($uibModalInstance, Task) {
+    function ModalCtrl($scope, $uibModalInstance, Task) {
 
         this.createTask = function(name) {
             Task.createTask(name);
@@ -13,5 +13,5 @@
 
     angular
         .module('blocItOff')
-        .controller('ModalCtrl', ['$uibModalInstance', 'Task', ModalCtrl]);
+        .controller('ModalCtrl', ['$scope', '$uibModalInstance', 'Task', ModalCtrl]);
 })();

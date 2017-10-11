@@ -1,5 +1,5 @@
 (function() {
-  function HomeCtrl($scope, $uibModal, Task) {
+  function ActiveCtrl($scope, $uibModal, Task) {
 
     this.tasks = Task.all;
 
@@ -14,10 +14,10 @@
       modalInstance.result.then(function(name) {
         Task.createTask(name);
       });
-    };    
+    };
   }
 
   angular
     .module('blocItOff')
-    .controller('HomeCtrl', ['$scope', '$uibModal', 'Task', HomeCtrl]);
+    .controller('ActiveCtrl', ['$scope', '$uibModal', 'Task', ActiveCtrl]);
 })();
