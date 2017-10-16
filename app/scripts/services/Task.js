@@ -16,22 +16,34 @@
       tasks.$remove(task);
     };
 
-    Task.completedTask = function(task){
-      tasks.completed = true ;
+    Task.completeTask = function(taskId) {
+      var task = tasks.$getRecord(taskId);
+      tasks.completed = true;
       tasks.$save(task);
+    };
 
-        }
+    // Task.completedTask = function(task){
+    //   tasks.completed = true ;
+    //   tasks.$save(task);
+    // };
+
+    // Task.markComplete = function(task){
+    //   tasks.completed(task);
+    // };
+
+    Task.expireTask = function(task) {
+      var task = tasks.$getRecord(task);
+      var today = new Date()
+      var now = today.getTime();
+      var days = 24 * 60 * 60 * 1000 // hours * minutes * seconds * milliseconds
+      if (task.completed = false && (now - task.dateAdded) >= (7 * days)){
+          task.expired = true;
+          tasks.$save(task);
+      }
+    };
 
     return Task;
     }
-
-
-  //   Task.createTask = function(name) {
-  //       tasks.$add(name);
-  //   };
-  //
-  //   return Task;
-  // }
 
   angular
     .module('blocItOff')

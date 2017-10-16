@@ -187,3 +187,27 @@ section.send-message {
   float: right;
 
 }
+
+input[type=checkbox] {
+  float: right;
+  margin-top: 8px;
+  margin-right: 25px;
+  background-color:#fff;
+  border-left-color:#fff;
+  border-right-color:#fff;
+  cursor: pointer;
+  -webkit-appearance: push-button;
+  -moz-appearance: button;
+  width: 30px;
+  height: 30px;
+}
+
+/*input[type=checkbox]:checked {
+  background-color:#777;
+  border-left-color:#fff;
+  border-right-color:#fff;
+}*/
+
+input[type=checkbox]:hover {
+  background-color:#777;
+}

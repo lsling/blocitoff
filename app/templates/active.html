@@ -1,10 +1,10 @@
 <h1 class="site-title">bloc it off</h1>
   <section class="task-block">
       <button class="button-space" type="button" ng-click="active.open()">+</button>
-          <div ng-hide="task.completed" ng-repeat="task in active.tasks | orderBy: 'createdAt' :true">
+          <div ng-repeat="task in active.tasks">
             <hr>
-              <a class="task-list" ng-click="active.setCurrentTask(task)">{{ task.$value }}</a>
-              <div class = "icon icon ion-close" ng-click="removeTask(task)"></div>
-              <div class = "icon icon ion-checkmark" ng-click="markComplete(task)"></div>
+            <div ng-init="expireTask(task)" ng-hide="task.completed" class="task-list">{{ task.$value }}
+              <input type="checkbox" checked="checked" ng-model="task.completed"/>
+            </div>
           </div>
   </section>

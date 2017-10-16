@@ -11,10 +11,18 @@
         windowClass: 'modal-window'
       });
 
-      modalInstance.result.then(function(name) {
-        Task.createTask(name);
+      modalInstance.result.then(function(task) {
+        Task.createTask(task);
       });
-    };
+
+      // this.removeTask = function(task) {
+      //   tasks.$remove(task);
+      // };
+      //
+      // this.completedTask = function(task){
+      //   tasks.completed(task);
+      // };
+    }
   }
 
   angular
