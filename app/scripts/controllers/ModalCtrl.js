@@ -1,8 +1,7 @@
 (function() {
     function ModalCtrl($scope, $uibModalInstance, Task) {
 
-        this.createTask = function(name) {
-            Task.createTask(name);
+        this.addTask = function(name) {
             $uibModalInstance.close();
         };
 

@@ -1,31 +1,33 @@
 (function() {
-  function ActiveCtrl($scope, $uibModal, Task) {
+  function ActiveCtrl($scope, Task) {
+    $scope.newTask = {};
+    $scope.tasks = Task.all;
 
-    this.tasks = Task.all;
+    $scope.hasItExpired = function(task){
+      var currentTime = new Date().getTime();
+      var taskCreated = task.createdAt;
+      if ((currentTime - taskCreated ) >= 604800000) {
+        Task.expiredTask(task);
 
-    this.open = function() {
-      var modalInstance = $uibModal.open({
-        animation: true,
-        templateUrl: '/templates/task-modal.html',
-        controller: 'ModalCtrl as modal',
-        windowClass: 'modal-window'
-      });
-
-      modalInstance.result.then(function(task) {
-        Task.createTask(task);
-      });
-
-      // this.removeTask = function(task) {
-      //   tasks.$remove(task);
-      // };
-      //
-      // this.completedTask = function(task){
-      //   tasks.completed(task);
-      // };
+      }
     }
+
+    $scope.addTask = function(){
+      Task.add($scope.newTask);
+      $scope.newTask = {};
+    }
+
+    $scope.removeTask = function(task){
+      Task.remove(task);
+    }
+
+    $scope.markComplete = function(task){
+      Task.markCompleted(task);
+    }
+
   }
 
   angular
     .module('blocItOff')
-    .controller('ActiveCtrl', ['$scope', '$uibModal', 'Task', ActiveCtrl]);
+    .controller('ActiveCtrl', ['$scope', 'Task', ActiveCtrl]);
 })();
