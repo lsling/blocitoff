@@ -4,7 +4,7 @@ button {
     transition-duration: 0.4s;
     background-color: #0153B9;
     border: none;
-    padding: 3px 15px;
+    padding: 3px 9px;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -72,20 +72,33 @@ hr {
 .task-list {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    line-height: 48px;
     color: #777;
     float: none;
     cursor: pointer;
     cursor: hand;
  }
 
+ .task-item {
+   font-family: 'Roboto', sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   color: #006699;
+   height: 51px;
+   padding: 10px 0 0 10px;
+ }
+
 input {
-    width: 200px;
+    width: 400px;
+    display: block;
+    margin-left: -25px;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    border-style: none;
 }
 
 input:focus {
     color: #006699;
-    width: 200px;
+    width: 400px;
 }
 
 .modal-title {
@@ -118,12 +131,6 @@ input:focus {
 .messages-container {
     padding-left: 400px;
 }
-
-/** alternating background color for message rows, maybe move to username?
-div.messages-list.ng-scope > div:nth-of-type(odd) {
-    background: #e0e0e0;
-}
-**/
 
 .task-title {
     font-family: 'Roboto', sans-serif;
@@ -173,18 +180,21 @@ section.send-message {
 }
 
 .ion-checkmark {
-  color: #777;
-  font-size: 30px;
-  float: right;
-  padding-right: 10px;
-
+  color: #fff;
+  font-size: 25px;
+  float: left;
+  width: 30px;
+  margin: 0px 0 0 -6px;
+  padding: 0 0 0 4px;
 }
 
 .ion-close {
   color: #777;
-  font-size: 30px;
+  font-size: 25px;
   padding-right: 10px;
   float: right;
+  margin-top: 5px;
+  margin-right: -10px;
 
 }
 
@@ -210,4 +220,37 @@ input[type=checkbox] {
 
 input[type=checkbox]:hover {
   background-color:#777;
+}
+
+.complete-btn {
+  float: left;
+  width: 30px;
+  margin: -10px 0 0 -35px;
+  padding: 0 0 0 6px;
+  background-color: #F2F2F2;
+}
+
+.remove-btn {
+  float: right;
+  width: 35px;
+  background-color: #F2F2F2;
+  margin-top: -10px;
+}
+
+.glyphicon {
+  margin-right: 10px;
+}
+
+.glyphicon-remove {
+  color: #777;
+}
+
+.task-time {
+  font-family: 'Roboto', sans-serif;
+  color: #0153B9;
+  font-size: 20px;
+}
+
+input.task-input {
+  padding-left: -10px;
 }

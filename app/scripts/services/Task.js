@@ -1,49 +1,44 @@
 (function() {
   function Task($firebaseArray) {
-    var Task = {};
     var ref = firebase.database().ref().child("tasks");
     var tasks = $firebaseArray(ref);
+    var completedTasksList = $firebaseArray(ref.orderByChild('completed').equalTo(true));
+    var expiredTasksList = $firebaseArray(ref.orderByChild('expired').equalTo(true));
 
-    Task.all = tasks;
-
-    Task.createTask = function(task) {
-      tasks.createdAt = firebase.database.ServerValue.TIMESTAMP;
-      tasks.completed = false;
-      return tasks.$add(task);
-    };
-
-    Task.removeTask = function(task) {
-      tasks.$remove(task);
-    };
-
-    Task.completeTask = function(taskId) {
-      var task = tasks.$getRecord(taskId);
-      tasks.completed = true;
+    var markCompletedTask = function(task){
+      task.completed = true ;
+      task.completedAt = firebase.database.ServerValue.TIMESTAMP;
       tasks.$save(task);
-    };
-
-    // Task.completedTask = function(task){
-    //   tasks.completed = true ;
-    //   tasks.$save(task);
-    // };
-
-    // Task.markComplete = function(task){
-    //   tasks.completed(task);
-    // };
-
-    Task.expireTask = function(task) {
-      var task = tasks.$getRecord(task);
-      var today = new Date()
-      var now = today.getTime();
-      var days = 24 * 60 * 60 * 1000 // hours * minutes * seconds * milliseconds
-      if (task.completed = false && (now - task.dateAdded) >= (7 * days)){
-          task.expired = true;
-          tasks.$save(task);
-      }
-    };
-
-    return Task;
     }
+
+    var addTask = function(task){
+      task.createdAt = firebase.database.ServerValue.TIMESTAMP;
+      task.completedAt = '';
+      task.completed = false;
+      return tasks.$add(task);
+
+    }
+
+    var removeTask = function(task) {
+      tasks.$remove(task);
+    }
+
+    var expiredTask = function(task) {
+      task.expired = true ;
+      task.expiredAt = firebase.database.ServerValue.TIMESTAMP;
+      tasks.$save(task);
+    }
+
+    return{
+      all : tasks,
+      add : addTask,
+      markCompleted : markCompletedTask,
+      remove : removeTask,
+      completed: completedTasksList,
+      expired: expiredTasksList,
+      expiredTask : expiredTask
+    };
+  }
 
   angular
     .module('blocItOff')

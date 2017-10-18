@@ -13,12 +13,12 @@
           templateUrl: '/templates/active.html'
         });
 
-        $stateProvider
-        .state('completed', {
-          url: '/completed',
-          controller: 'CompletedCtrl as completed',
-          templateUrl: '/templates/completed.html'
-        });
+        // $stateProvider
+        // .state('completed', {
+        //   url: '/completed',
+        //   controller: 'CompletedCtrl as completed',
+        //   templateUrl: '/templates/completed.html'
+        // });
 
         $stateProvider
         .state('expired', {
