@@ -6,6 +6,11 @@
     <button class="remove-btn" ng-click="removeTask(task)"><span class="icon icon ion-close"></span></button>
   </div>
   <input type="text" class="task-input" maxlength="30" ng-model="newTask.title" placeholder="add new task">
+  <select name="priority" ng-model="task.priority">
+    <option value="high">high priority</option>
+    <option value="medium" selected>medium priority</option>
+    <option value="low">low priority</option>
+  </select>
   <button class="button-space" type="button" ng-click="createTask(newTask.title)">+</button>
   <button class="toggle-page" type="button" onclick="location.href='/old'">view old tasks</button>
 </section>

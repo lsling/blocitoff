@@ -288,3 +288,11 @@ input[type=checkbox]:hover {
   color: #0153B9;
   font-size: 20px;
 }
+
+select {
+  font-family: 'Roboto', sans-serif;
+  float: right;
+  width: 400px;
+  height: 40px;
+  margin-top: -10px;
+}

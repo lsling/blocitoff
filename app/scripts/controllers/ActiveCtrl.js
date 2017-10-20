@@ -14,6 +14,7 @@
 
     $scope.createTask = function(){
       Task.add($scope.newTask);
+      $scope.priority = null;
       $scope.newTask = {};
     }
 

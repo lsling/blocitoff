@@ -15,6 +15,7 @@
       task.createdAt = firebase.database.ServerValue.TIMESTAMP;
       task.completedAt = '';
       task.completed = false;
+      task.priority = null;
       return tasks.$add(task);
 
     }
@@ -34,8 +35,8 @@
       add : createTask,
       markCompleted : markCompletedTask,
       remove : removeTask,
-      completed: completedTasksList,
-      expired: expiredTasksList,
+      completed : completedTasksList,
+      expired : expiredTasksList,
       expiredTask : expiredTask
     };
   }
