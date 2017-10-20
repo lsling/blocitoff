@@ -11,7 +11,7 @@
       tasks.$save(task);
     }
 
-    var addTask = function(task){
+    var createTask = function(task){
       task.createdAt = firebase.database.ServerValue.TIMESTAMP;
       task.completedAt = '';
       task.completed = false;
@@ -31,7 +31,7 @@
 
     return{
       all : tasks,
-      add : addTask,
+      add : createTask,
       markCompleted : markCompletedTask,
       remove : removeTask,
       completed: completedTasksList,

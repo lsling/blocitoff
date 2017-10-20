@@ -12,7 +12,7 @@
       }
     }
 
-    $scope.addTask = function(){
+    $scope.createTask = function(){
       Task.add($scope.newTask);
       $scope.newTask = {};
     }

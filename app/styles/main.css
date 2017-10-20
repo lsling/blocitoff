@@ -26,6 +26,15 @@ button:hover {
     margin: -10px 0 0px -25px;
 }
 
+button[type=button].toggle-page {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  color: #0153B9;
+  font-size: 20px;
+  margin-left: -25px;
+  background-color: white;
+}
+
 button[type=submit] {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
@@ -33,7 +42,6 @@ button[type=submit] {
 }
 
 button[type=button] {
-    text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: 32px;
@@ -87,18 +95,48 @@ hr {
    padding: 10px 0 0 10px;
  }
 
+ .list-title {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 200;
+   font-size: 28px;
+   color: #0172FF;
+   margin-left: -17px;
+ }
+
 input {
     width: 400px;
     display: block;
     margin-left: -25px;
     margin-top: -25px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-style: none;
+    text-align: center;
+    height: 40px;
+    background-color: #0172FF;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #fff;
+  opacity: 1;
 }
 
 input:focus {
     color: #006699;
     width: 400px;
+}
+
+input[type=text] {
+  color: #fff;
 }
 
 .modal-title {
@@ -249,8 +287,4 @@ input[type=checkbox]:hover {
   font-family: 'Roboto', sans-serif;
   color: #0153B9;
   font-size: 20px;
-}
-
-input.task-input {
-  padding-left: -10px;
 }

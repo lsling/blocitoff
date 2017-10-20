@@ -1,0 +1,12 @@
+<h1 class="site-title">bloc it off</h1>
+<section class="task-block">
+  <div class="list-title">completed tasks</div>
+  <div class="task-item" ng-repeat="task in completedTasks">{{task.title}}
+    <!-- <button class="remove-btn" ng-click="removeTask(task)"><span class="icon icon ion-close"></span></button> -->
+  </div>
+  <div class="list-title">expired tasks</div>
+  <div class="task-item" ng-repeat="task in expiredTasks">{{task.title}}
+    <!-- <button class="remove-btn" ng-click="removeTask(task)"><span class="icon icon ion-close"></span></button> -->
+  </div>
+  <button class="toggle-page" type="button" onclick="location.href='/'">view active tasks</button>
+</section>

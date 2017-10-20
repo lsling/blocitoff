@@ -1,9 +1,11 @@
 <h1 class="site-title">bloc it off</h1>
 <section class="task-block">
-  <input type="text" class="task-input" maxlength="30" class="new-msg" ng-model="newTask.title" placeholder="Add new task..">
-  <button class="button-space" type="button" ng-click="addTask(newTask.title)">+</button>
+  <div class="list-title">Active Tasks</div>
   <div class="task-item" ng-hide="task.completed || task.expired" ng-repeat="task in tasks | orderBy: 'createdAt':true" ng-init="hasItExpired(task)">{{task.title}}
     <button class="complete-btn" ng-click="markComplete(task)"><span class="icon icon ion-checkmark"></span></button>
     <button class="remove-btn" ng-click="removeTask(task)"><span class="icon icon ion-close"></span></button>
   </div>
+  <input type="text" class="task-input" maxlength="30" ng-model="newTask.title" placeholder="add new task">
+  <button class="button-space" type="button" ng-click="createTask(newTask.title)">+</button>
+  <button class="toggle-page" type="button" onclick="location.href='/old'">view old tasks</button>
 </section>

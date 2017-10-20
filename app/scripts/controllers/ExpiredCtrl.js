@@ -1,13 +1,15 @@
 (function(){
-    function ExpiredCtrl($scope, Task){
-        $scope.expiredTasks = Task.expired;
-        $scope.completedTasks = Task.completed;
-        $scope.newArray = $scope.expiredTasks.concat($scope.completedTasks);
+  function ExpiredCtrl($scope, Task){
+    $scope.expiredTasks = Task.expired;
+    $scope.completedTasks = Task.completed;
+    $scope.newArray = $scope.expiredTasks.concat($scope.completedTasks);
 
-        console.log($scope.newArray);
-
+    $scope.removeTask = function(task){
+      Task.remove(task);
     }
-    angular
-        .module('blocItOff')
-        .controller('ExpiredCtrl', ['$scope', 'Task' , ExpiredCtrl]);
+  }
+
+  angular
+    .module('blocItOff')
+    .controller('ExpiredCtrl', ['$scope', 'Task' , ExpiredCtrl]);
 })();
