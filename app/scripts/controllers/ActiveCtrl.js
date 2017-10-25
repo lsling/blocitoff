@@ -14,8 +14,8 @@
 
     $scope.createTask = function(){
       Task.add($scope.newTask);
-      $scope.priority = null;
       $scope.newTask = {};
+      $scope.priority = '';
     }
 
     $scope.removeTask = function(task){
@@ -25,7 +25,6 @@
     $scope.markComplete = function(task){
       Task.markCompleted(task);
     }
-
   }
 
   angular

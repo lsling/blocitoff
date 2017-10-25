@@ -1,16 +1,16 @@
 <h1 class="site-title">bloc it off</h1>
 <section class="task-block">
   <div class="list-title">Active Tasks</div>
-  <div class="task-item" ng-hide="task.completed || task.expired" ng-repeat="task in tasks | orderBy: 'createdAt':true" ng-init="hasItExpired(task)">{{task.title}}
+  <div class="task-item" ng-hide="task.completed || task.expired" ng-repeat="task in tasks | orderBy: 'priority'" ng-init="hasItExpired(task)">{{task.title}} – <strong>priority: {{task.priority}}</strong>
     <button class="complete-btn" ng-click="markComplete(task)"><span class="icon icon ion-checkmark"></span></button>
     <button class="remove-btn" ng-click="removeTask(task)"><span class="icon icon ion-close"></span></button>
   </div>
   <input type="text" class="task-input" maxlength="30" ng-model="newTask.title" placeholder="add new task">
-  <select name="priority" ng-model="task.priority">
-    <option value="high">high priority</option>
-    <option value="medium" selected>medium priority</option>
-    <option value="low">low priority</option>
+  <select name="priority" ng-model="newTask.priority" title="Select Priority Level">
+    <option value="critical">critical</option>
+    <option value="important">important</option>
+    <option value="moderate">moderate</option>
   </select>
-  <button class="button-space" type="button" ng-click="createTask(newTask.title)">+</button>
+  <button class="button-space" type="submit" ng-click="createTask(newTask.title)">+</button>
   <button class="toggle-page" type="button" onclick="location.href='/old'">view old tasks</button>
 </section>

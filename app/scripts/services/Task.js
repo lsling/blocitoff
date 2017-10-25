@@ -2,8 +2,8 @@
   function Task($firebaseArray) {
     var ref = firebase.database().ref().child("tasks");
     var tasks = $firebaseArray(ref);
-    var completedTasksList = $firebaseArray(ref.orderByChild('completed').equalTo(true));
-    var expiredTasksList = $firebaseArray(ref.orderByChild('expired').equalTo(true));
+    var completedTasksList = $firebaseArray(ref.orderByChild('priority').equalTo(true));
+    var expiredTasksList = $firebaseArray(ref.orderByChild('priority').equalTo(true));
 
     var markCompletedTask = function(task){
       task.completed = true ;
@@ -15,7 +15,7 @@
       task.createdAt = firebase.database.ServerValue.TIMESTAMP;
       task.completedAt = '';
       task.completed = false;
-      task.priority = null;
+      task.$priority = '';
       return tasks.$add(task);
 
     }
@@ -37,7 +37,7 @@
       remove : removeTask,
       completed : completedTasksList,
       expired : expiredTasksList,
-      expiredTask : expiredTask
+      expiredTask : expiredTask,
     };
   }
 
