@@ -2,8 +2,8 @@
   function Task($firebaseArray) {
     var ref = firebase.database().ref().child("tasks");
     var tasks = $firebaseArray(ref);
-    var completedTasksList = $firebaseArray(ref.orderByChild('priority').equalTo(true));
-    var expiredTasksList = $firebaseArray(ref.orderByChild('priority').equalTo(true));
+    var completedTasksList = $firebaseArray(ref.orderByChild('completed').equalTo(true));
+    var expiredTasksList = $firebaseArray(ref.orderByChild('expired').equalTo(true));
 
     var markCompletedTask = function(task){
       task.completed = true ;
