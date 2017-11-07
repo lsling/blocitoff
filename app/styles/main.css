@@ -1,5 +1,5 @@
 body {
-  background-color: #02779E;
+  background-color: #0B6E80;
 }
 
 button {
@@ -33,7 +33,7 @@ button[type=button].toggle-page {
   font-weight: 300;
   color: #02779E;
   font-size: 12px;
-  margin-left: -5px;
+  margin-left: -8px;
   background-color: white;
   padding-top: 15px;
 }
@@ -49,10 +49,9 @@ button[type=button] {
 }
 
 hr {
-    width: 108%;
-    margin: 0px;
-    border: 1px solid #fff;
-    margin-left: -25px;
+  width: 110%;
+  margin-left: -35px;
+	border-top: 1px dashed #0B6E80;
 }
 
 .task-block {
@@ -64,11 +63,11 @@ hr {
 
 .site-title {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 32px;
-    color: #02779E;
+    font-weight: 200;
+    font-size: 40px;
+    color: #0B6E80;
     text-align: left;
-    padding: 30px 0px 0px 28px;
+    padding: 25px 0px 0px 25px;
     height: 80px;
     display: block;
     margin: auto;
@@ -87,17 +86,18 @@ hr {
    font-family: 'Roboto', sans-serif;
    font-size: 20px;
    font-weight: 300;
-   color: #006699;
+   color: #0B6E80;
    height: 50px;
    padding: 10px 30px 0 0px;
  }
 
  .list-title {
    font-family: 'Roboto', sans-serif;
-   font-weight: 300;
-   font-size: 20px;
-   color: #02779E;
-   padding: 0 0 20px 0;
+   font-style: italic;
+   font-weight: 400;
+   font-size: 18px;
+   color: #0B6E80;
+   padding: 20px 0 10px 0;
  }
 
 input {
@@ -131,20 +131,20 @@ input:focus {
 
 input[type=text] {
   font-weight: 300;
-  color: #02779E;
-  padding-left: 8px;
+  color: #0B6E80;
+  padding-left: 5px;
 
 }
 
 .task-title {
     font-family: 'Roboto', sans-serif;
-    color: #006699;
+    color: #0B6E80;
     font-size: 24px;
     padding-top: 10px;
 }
 
 .ion-ios-checkmark-outline {
-  color: #F5A94F;
+  color: #A7CD2C;
   font-size: 30px;
   margin: 0px 0 0 -6px;
   padding: 0 0 0 4px;
@@ -152,11 +152,11 @@ input[type=text] {
 
 .ion-ios-checkmark-outline:hover:before {
   content: "\f3ff";
-  color: #F5A94F;
+  color: #A7CD2C;
 }
 
 .ion-ios-close-outline {
-  color: #F5A94F;
+  color: #0B6E80;
   font-size: 30px;
   padding-right: 10px;
   float: right;
@@ -166,10 +166,8 @@ input[type=text] {
 
 .ion-ios-close-outline:hover:before {
   content: "\f406";
-  color: #F5A94F;
+  color: #0B6E80;
 }
-
-
 
 .complete-btn {
   float: left;
@@ -186,19 +184,19 @@ input[type=text] {
 
 .task-time {
   font-family: 'Roboto', sans-serif;
-  color: #02779E;
+  color: #0B6E80;
   font-size: 20px;
 }
 
 select {
   font-family: 'Roboto', sans-serif;
-  color: #02779E;
+  color: #0B6E80;
   width: 120px;
   height: 50px;
   border: none;
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
-  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#02779E' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#A7CD2C' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
   background-position: 100% 50%;
   background-repeat: no-repeat;
   padding-left: 8px;
@@ -213,7 +211,7 @@ select {
 .page {
   width: 600px;
   background-color: white;
-  box-shadow: 2px 2px 10px #015976;
+  box-shadow: 2px 2px 10px #00424E;
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
@@ -224,11 +222,11 @@ select {
 }
 
 .ion-ios-plus-outline {
-  color: #F5A94F;
+  color: #A7CD2C;
   font-size: 40px;
 }
 
 .ion-ios-plus-outline:hover:before {
   content: "\f48b";
-  color: #F5A94F;
+  color: #A7CD2C;
 }

@@ -1,8 +1,7 @@
 <section class="page"><h1 class="site-title">Bloc It Off</h1>
   <br>
   <section class="task-block">
-    <div class="list-title">Active Tasks</div>
-      <div class="add-new">
+    <div class="add-new">
       <input type="text" class="task-input" maxlength="30" ng-model="newTask.title" placeholder="Add New Task">
         <select name="priority" ng-model="newTask.priority" title="Select Priority Level">
           <option value="critical">Critical</option>
@@ -10,7 +9,8 @@
           <option value="moderate">Moderate</option>
         </select>
         <button class="button-space" type="submit" ng-click="createTask(newTask.title)"><span class="ion-ios-plus-outline"></span></button>
-      </div>
+    </div>
+      <div class="list-title">Active Tasks</div>
       <div class="task-item" ng-hide="task.completed || task.expired" ng-repeat="task in tasks | orderBy: 'priority'" ng-init="hasItExpired(task)">{{task.title}} <span class="priority"> Priority: {{task.priority}}</span>
         <button class="complete-btn" ng-click="markComplete(task)"><span class="ion-ios-checkmark-outline"></span></button>
         <button class="remove-btn" ng-click="removeTask(task)"><span class="ion-ios-close-outline"></span></button>
