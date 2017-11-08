@@ -15,7 +15,7 @@
       task.createdAt = firebase.database.ServerValue.TIMESTAMP;
       task.completedAt = '';
       task.completed = false;
-      task.$priority = '';
+      task.$priority = 0;
       return tasks.$add(task);
 
     }

@@ -4,9 +4,9 @@
     <div class="add-new">
       <input type="text" class="task-input" maxlength="30" ng-model="newTask.title" placeholder="Add New Task">
         <select name="priority" ng-model="newTask.priority" title="Select Priority Level">
-          <option value="critical">Critical</option>
-          <option value="important">Important</option>
-          <option value="moderate">Moderate</option>
+          <option name="High" value="1">High</option>
+          <option name="Medium" value="2">Medium</option>
+          <option name="Low" value="3">Low</option>
         </select>
         <button class="button-space" type="submit" ng-click="createTask(newTask.title)"><span class="ion-ios-plus-outline"></span></button>
     </div>

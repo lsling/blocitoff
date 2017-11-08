@@ -8,14 +8,13 @@
       var taskCreated = task.createdAt;
       if ((currentTime - taskCreated ) >= 604800000) {
         Task.expiredTask(task);
-
       }
     }
 
     $scope.createTask = function(){
       Task.add($scope.newTask);
       $scope.newTask = {};
-      $scope.priority = '';
+      $scope.priority = 0;
     }
 
     $scope.removeTask = function(task){
