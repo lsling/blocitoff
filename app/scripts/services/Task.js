@@ -21,7 +21,7 @@
     }
 
     var removeTask = function(task) {
-      tasks.$remove(task);
+      tasks.$remove(tasks.$indexFor(task.$id));
     }
 
     var expiredTask = function(task) {

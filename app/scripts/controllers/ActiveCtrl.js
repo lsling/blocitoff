@@ -24,6 +24,22 @@
     $scope.markComplete = function(task){
       Task.markCompleted(task);
     }
+
+    $scope.humanReadablePriority = function(priorityNumber) {
+      switch (parseInt(priorityNumber)) {
+        case 1:
+          return 'High';
+          break;
+        case 2:
+          return 'Medium';
+          break;
+        case 3:
+          return 'Low';
+          break;
+        default:
+          return 'N/A';
+      }
+    }
   }
 
   angular
